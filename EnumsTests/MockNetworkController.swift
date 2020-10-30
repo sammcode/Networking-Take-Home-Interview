@@ -8,7 +8,7 @@
 import Foundation
 @testable import Enums
 
-class SuccessMockNetworkController : NetworkPlaceholder {
+class MockNetworkController : NetworkPlaceholder {
 	
 	let data: Data?
 	let response: URLResponse?

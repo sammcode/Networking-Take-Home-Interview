@@ -24,12 +24,6 @@ class NetworkController {
 		let request = URLRequest(url: url)
 		network.get(request: request) { (possibleData, possibleResponse, possibleError) in
 			
-			if let data = possibleData {
-				let downloadedPerson = try! JSONDecoder().decode(NetworkPerson.self, from: data)
-				completion(downloadedPerson, nil)
-			} else {
-				completion(nil, possibleError)
-			}
 		}
 	}
 }
