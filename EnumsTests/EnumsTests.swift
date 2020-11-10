@@ -6,12 +6,12 @@
 //
 
 import XCTest
-@testable import Enums
+@testable import Networking_Take_Home_Interview
 
 class EnumsTests: XCTestCase {
 	
-	/// Expected success; The Happy Path™
 	func testSuccessfulRequest() {
+        // Expected success; The Happy Path™
 		let mockServer = MockNetworkController(data: validData,
 											   response: validResponse,
 											   error: nil)
@@ -20,35 +20,68 @@ class EnumsTests: XCTestCase {
             XCTAssertNil(possibleError)
         }
 	}
-
-	func testValidErrorCombinations() {
-        
+    
+    func testNetworkError() {
+        // Network error; see NSURLError.h
+        let errorScenario = MockNetworkController(data: nil,
+                                                  response: nil,
+                                                  error: validError)
+        networkCall(errorScenario) { (possiblePerson, possibleError) in
+            XCTAssertNil(possiblePerson)
+            XCTAssertNotNil(possibleError)
+        }
+    }
+    
+    func testiOSDevHumanError() {
+        // Sounds impossible, but iOS devs also make mistakes.
+        // e.g. HTTP 400 (Bad Request)
+        let errorScenario = MockNetworkController(data: invalidData,
+                                                  response: invalidResponse,
+                                                  error: nil)
+        networkCall(errorScenario) { (possiblePerson, possibleError) in
+            XCTAssertNil(possiblePerson)
+            XCTAssertNotNil(possibleError)
+        }
+    }
+    
+    func testBackendDevHumanError() {
+        // Programming is hard 🤷🏻‍♂️
         let errorScenarios = [
-            
-            // Network error
-            MockNetworkController(data: nil, response: nil, error: validError), // Network error; see NSURLError.h
-            
-            // iOS dev human error
-            // Sounds impossible, but iOS devs also make mistakes.
-            MockNetworkController(data: invalidData, response: invalidResponse, error: nil), // e.g. HTTP 400 (Bad Request)
-            
-            // Backend dev human error
-            // Programming is hard 🤷🏻‍♂️
             MockNetworkController(data: invalidData, response: validResponse, error: nil), // Returned 200 with invalid data
             MockNetworkController(data: nil, response: validResponse, error: nil), // Returned 200 but no data
             MockNetworkController(data: validData, response: invalidResponse, error: nil), // Returned 300+ but valid data
             MockNetworkController(data: nil, response: invalidResponse, error: validError), // e.g. too many redirects (HTTP 302)
             MockNetworkController(data: nil, response: invalidResponse, error: nil), // e.g. HTTP 500 (Server Error)
-            
-            // Invalid State: missing response
-            // When consuming an API, an HTTP response is expected.
+        ]
+        
+        for scenario in errorScenarios {
+            networkCall(scenario) { (possiblePerson, possibleError) in
+                XCTAssertNil(possiblePerson)
+                XCTAssertNotNil(possibleError)
+            }
+        }
+    }
+    
+    func testInvalidStateMissingResponse() {
+        // When consuming an API, an HTTP response is expected.
+        let errorScenarios = [
             MockNetworkController(data: invalidData, response: nil, error: nil), // Server did not return an HTTP response.
             MockNetworkController(data: validData, response: nil, error: nil), // Server did not return an HTTP response.
             MockNetworkController(data: validData, response: nil, error: validError), // Server did not return an HTTP response.
             MockNetworkController(data: invalidData, response: nil, error: validError), // Could be `NSURLErrorBadServerResponse`.
-            
-            // Invalid State: Should never happen.
-            // All of these don't make sense, but due to the fact that we're using 3 optionals, they _could_ happen.
+        ]
+        
+        for scenario in errorScenarios {
+            networkCall(scenario) { (possiblePerson, possibleError) in
+                XCTAssertNil(possiblePerson)
+                XCTAssertNotNil(possibleError)
+            }
+        }
+    }
+
+	func testInvalidStateShouldNeverHappen() {
+        // All of these don't make sense, but due to the fact that we're using 3 optionals, they _could_ happen.
+        let errorScenarios = [
             MockNetworkController(data: nil, response: nil, error: nil), // Apple framework error?
             MockNetworkController(data: invalidData, response: validResponse, error: validError), // Apple framework error?
             MockNetworkController(data: nil, response: validResponse, error: validError), // Apple framework error?
@@ -109,7 +142,7 @@ extension EnumsTests {
 		}
 		
 		waitForExpectations(timeout: 2) { _ in
-			fatalError()
+            
 		}
 	}
 }

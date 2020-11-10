@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Enums
+@testable import Networking_Take_Home_Interview
 
 class MockNetworkController : NetworkPlaceholder {
 	
