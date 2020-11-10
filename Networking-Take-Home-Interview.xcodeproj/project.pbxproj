@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B830F4C2547EB83002F1F80 /* Enums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enums.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B830F4C2547EB83002F1F80 /* Networking-Take-Home-Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Networking-Take-Home-Interview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B830F4F2547EB83002F1F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B830F512547EB83002F1F80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9B830F532547EB83002F1F80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 		9B830F582547EB85002F1F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B830F5B2547EB85002F1F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B830F5D2547EB85002F1F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B830F622547EB85002F1F80 /* EnumsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnumsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B830F622547EB85002F1F80 /* Networking-Take-Home-InterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Networking-Take-Home-InterviewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B830F662547EB85002F1F80 /* EnumsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsTests.swift; sourceTree = "<group>"; };
 		9B830F682547EB85002F1F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B830F8C2547EBBC002F1F80 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 		9B830F4D2547EB83002F1F80 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B830F4C2547EB83002F1F80 /* Enums.app */,
-				9B830F622547EB85002F1F80 /* EnumsTests.xctest */,
+				9B830F4C2547EB83002F1F80 /* Networking-Take-Home-Interview.app */,
+				9B830F622547EB85002F1F80 /* Networking-Take-Home-InterviewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B830F4B2547EB83002F1F80 /* Enums */ = {
+		9B830F4B2547EB83002F1F80 /* Networking-Take-Home-Interview */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B830F762547EB85002F1F80 /* Build configuration list for PBXNativeTarget "Enums" */;
+			buildConfigurationList = 9B830F762547EB85002F1F80 /* Build configuration list for PBXNativeTarget "Networking-Take-Home-Interview" */;
 			buildPhases = (
 				9B830F482547EB83002F1F80 /* Sources */,
 				9B830F492547EB83002F1F80 /* Frameworks */,
@@ -134,14 +134,14 @@
 			);
 			dependencies = (
 			);
-			name = Enums;
+			name = "Networking-Take-Home-Interview";
 			productName = Enums;
-			productReference = 9B830F4C2547EB83002F1F80 /* Enums.app */;
+			productReference = 9B830F4C2547EB83002F1F80 /* Networking-Take-Home-Interview.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9B830F612547EB85002F1F80 /* EnumsTests */ = {
+		9B830F612547EB85002F1F80 /* Networking-Take-Home-InterviewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B830F792547EB85002F1F80 /* Build configuration list for PBXNativeTarget "EnumsTests" */;
+			buildConfigurationList = 9B830F792547EB85002F1F80 /* Build configuration list for PBXNativeTarget "Networking-Take-Home-InterviewTests" */;
 			buildPhases = (
 				9B830F5E2547EB85002F1F80 /* Sources */,
 				9B830F5F2547EB85002F1F80 /* Frameworks */,
@@ -152,9 +152,9 @@
 			dependencies = (
 				9B830F642547EB85002F1F80 /* PBXTargetDependency */,
 			);
-			name = EnumsTests;
+			name = "Networking-Take-Home-InterviewTests";
 			productName = EnumsTests;
-			productReference = 9B830F622547EB85002F1F80 /* EnumsTests.xctest */;
+			productReference = 9B830F622547EB85002F1F80 /* Networking-Take-Home-InterviewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +175,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9B830F472547EB83002F1F80 /* Build configuration list for PBXProject "Enums" */;
+			buildConfigurationList = 9B830F472547EB83002F1F80 /* Build configuration list for PBXProject "Networking-Take-Home-Interview" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,8 +188,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B830F4B2547EB83002F1F80 /* Enums */,
-				9B830F612547EB85002F1F80 /* EnumsTests */,
+				9B830F4B2547EB83002F1F80 /* Networking-Take-Home-Interview */,
+				9B830F612547EB85002F1F80 /* Networking-Take-Home-InterviewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,7 @@
 /* Begin PBXTargetDependency section */
 		9B830F642547EB85002F1F80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B830F4B2547EB83002F1F80 /* Enums */;
+			target = 9B830F4B2547EB83002F1F80 /* Networking-Take-Home-Interview */;
 			targetProxy = 9B830F632547EB85002F1F80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -322,6 +322,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Networking-Take-Home-Interview";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -376,6 +377,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Networking-Take-Home-Interview";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -395,7 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = humans.mx.Enums;
+				PRODUCT_BUNDLE_IDENTIFIER = "humans.mx.Networking-Take-Home-Interview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -414,7 +416,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = humans.mx.Enums;
+				PRODUCT_BUNDLE_IDENTIFIER = "humans.mx.Networking-Take-Home-Interview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,7 +441,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enums.app/Enums";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking-Take-Home-Interview.app/Networking-Take-Home-Interview";
 			};
 			name = Debug;
 		};
@@ -461,14 +463,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enums.app/Enums";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking-Take-Home-Interview.app/Networking-Take-Home-Interview";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B830F472547EB83002F1F80 /* Build configuration list for PBXProject "Enums" */ = {
+		9B830F472547EB83002F1F80 /* Build configuration list for PBXProject "Networking-Take-Home-Interview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B830F742547EB85002F1F80 /* Debug */,
@@ -477,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B830F762547EB85002F1F80 /* Build configuration list for PBXNativeTarget "Enums" */ = {
+		9B830F762547EB85002F1F80 /* Build configuration list for PBXNativeTarget "Networking-Take-Home-Interview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B830F772547EB85002F1F80 /* Debug */,
@@ -486,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B830F792547EB85002F1F80 /* Build configuration list for PBXNativeTarget "EnumsTests" */ = {
+		9B830F792547EB85002F1F80 /* Build configuration list for PBXNativeTarget "Networking-Take-Home-InterviewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B830F7A2547EB85002F1F80 /* Debug */,
