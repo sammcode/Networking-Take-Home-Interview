@@ -1,0 +1,29 @@
+*From Junior to Senior*
+**Take Home Interview**
+
+The goal of this project is to evaluate your skills as a developer using OOP design principles, networking intermediate knowledge, enums/generics and unit tests.
+
+The project currently has 3 classes that are relevant:
+- NetworkController: with a single `fetch` function. You will do most of your work here.
+- NetworkPerson: parses the API response from `NetworkController.fetch`
+- ViewController: empty for now
+
+For this project you are required to do the following:
+- All unit tests should pass.
+- `ViewController` should have a single label, centered both in portrait and landscape, that shows the fetched NetworkPerson's name.
+
+Other requirements:
+- You may not modify the unit tests.
+- You may not modify `protocol NetworkPlaceholder`
+- You may modify `NetworkController` as you see fit
+- You may modify `ViewController` as you see fit
+- You may add new helper objects, if you wish
+
+This should not take more than 200 lines of code..
+
+*Deliverable*
+The deliverable has two components.
+- A video of your app in action
+- The source code of your app
+
+Once you're done, check the solution video attached to grade your own solution.

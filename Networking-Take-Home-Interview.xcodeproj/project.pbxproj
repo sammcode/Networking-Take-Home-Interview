@@ -91,7 +91,6 @@
 				9B830F8C2547EBBC002F1F80 /* NetworkController.swift */,
 				9B830FA42547F149002F1F80 /* NetworkPerson.swift */,
 				9B830F532547EB83002F1F80 /* ViewController.swift */,
-				9B830F9A2547F007002F1F80 /* URLSession+NetworkPlaceholder.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -109,6 +108,7 @@
 		9B830F822547EB92002F1F80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B830F9A2547F007002F1F80 /* URLSession+NetworkPlaceholder.swift */,
 				9B830F5D2547EB85002F1F80 /* Info.plist */,
 				9B830F4F2547EB83002F1F80 /* AppDelegate.swift */,
 				9B830F512547EB83002F1F80 /* SceneDelegate.swift */,
