@@ -19,7 +19,7 @@ Other requirements:
 - You may modify `ViewController` as you see fit
 - You may add new helper objects, if you wish
 
-This should not take more than 200 lines of code..
+This should not take more than 200 lines of code.
 
 *Deliverable*
 The deliverable has two components.
