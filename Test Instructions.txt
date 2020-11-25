@@ -13,7 +13,7 @@ For this project you are required to do the following:
 - `ViewController` should have a single label, centered both in portrait and landscape, that shows the fetched NetworkPerson's name.
 
 Other requirements:
-- You may not modify the unit tests.
+- You may not modify the unit tests unless absolutely necessary.
 - You may not modify `protocol NetworkPlaceholder`
 - You may modify `NetworkController` as you see fit
 - You may modify `ViewController` as you see fit
