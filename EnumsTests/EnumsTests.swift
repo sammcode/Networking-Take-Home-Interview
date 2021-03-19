@@ -135,9 +135,14 @@ extension EnumsTests {
                              completion: @escaping (NetworkPerson?, Error?) -> Void) {
         
 		let expectation = self.expectation(description: "Waiting...")
-		let network = NetworkController(network: controller)
-		network.fetch { (possiblePerson, possibleError) in
-			completion(possiblePerson, possibleError)
+        let network = NetworkController(network: controller, baseURL: URL(string: "https://swapi.dev/api/people/1")!)
+        network.fetch { result in
+            switch result {
+            case .success(let person):
+                completion(person, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
 			expectation.fulfill()
 		}
 		
